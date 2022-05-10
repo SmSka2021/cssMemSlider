@@ -8,28 +8,24 @@
 @font-face {
   font-family: 'Georgia';
   src: url("./assets/fonts/Georgia.woff") format(woff);
-  ;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Georgia';
   src: url("./assets/fonts/Georgia-Bold.woff") format(woff);
-  ;
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Georgia';
   src: url("./assets/fonts/Georgia-Bold.ttf") format(ttf);
-  ;
-  font-weight: 700;
+   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Georgia';
   src: url("./assets/fonts/Georgia.ttf") format(ttf);
-  ;
   font-weight: 400;
 }
 
@@ -82,12 +78,13 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  
+  margin-top: 2rem;  
 }
 @media screen and (max-width: 320px){
   .slider_and_input{
 flex-direction: column;
 justify-content: flex-start;
+margin-top: 0;
 }
 .slider__inner {
   width: 400%;
@@ -139,7 +136,7 @@ justify-content: flex-start;
   0% {
     transform: scale(0.4);
     background: rgba(94, 4, 16, 0.7);
-    box-shadow: 0 0 0 12px rgb(238, 235, 235), 0 0 0 36px rgba(241, 207, 12, 0.5);
+    box-shadow: 0 0 0 .7rem rgb(238, 235, 235), 0 0 0 1rem rgba(241, 207, 12, 0.5);
   }
 
   100% {
@@ -150,8 +147,8 @@ justify-content: flex-start;
 
 .switchers {
   width: 40%;
-  text-align: end;
-  margin-right: -1rem;
+  text-align: end; 
+  overflow: visible;
 }
 
 .switcher {
@@ -165,10 +162,10 @@ justify-content: flex-start;
   position: relative;
   z-index: 10;
   transition: all .2s linear;
+  overflow: visible;
 }
 @media screen and (max-width: 320px){
   .switchers {
-
     width: 100%;
     display: flex;
     justify-content: center;
@@ -181,8 +178,7 @@ justify-content: flex-start;
     cursor: pointer;
     width: 2rem;
     height: 2rem;
-    margin: 0;
-   
+    margin: 0;   
   }
 }
 .slide_img {
@@ -192,7 +188,7 @@ justify-content: flex-start;
   transform: scale(0);
   visibility: hidden;
 }
-
+/* ЭТО НЕ УБИРАЕТ ЭЛЕМЕНТ ИЗ ПОТОКА, ЭТО СЛАЙДЕР- передвигаем полосу с картинками и текстом по оси Х)*/
 #img_1:checked~#slider__inner {
   left: 0%;
 }
