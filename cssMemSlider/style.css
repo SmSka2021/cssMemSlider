@@ -5,215 +5,193 @@
   scroll-behavior: smooth;
 }
 
-:root {
-  --color-gold: #bdae82;
-  --color-black: #000;
-  --color-white: #FFFFFF;
+@font-face {
+  font-family: 'Georgia';
+  src: url("./assets/fonts/Georgia.woff") format(woff);
+  ;
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Merriweather';
-  src: url("./assets/fonts/Merriweather-Bold.ttf");
+  font-family: 'Georgia';
+  src: url("./assets/fonts/Georgia-Bold.woff") format(woff);
+  ;
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Georgia';
-  src: url("./assets/fonts/Georgia-Bold.woff")  format(woff);;
+  src: url("./assets/fonts/Georgia-Bold.ttf") format(ttf);
+  ;
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Merriweather';
-  src: url("./assets/fonts/Georgia.woff2")  format(woff2);;
+  font-family: 'Georgia';
+  src: url("./assets/fonts/Georgia.ttf") format(ttf);
+  ;
   font-weight: 400;
 }
-.block{
-  width: 100%; 
+
+.block {
+  width: 100%;
   min-height: 97vh;
-  background:rgb(31, 1, 51);
-  padding: 5% 0;  
+  background: rgb(31, 1, 51);
+  padding: 5% 0;
 }
-.wrapper{
-  width: 80%; 
+
+.wrapper {
+  width: 80%;
   height: 80vh;
   margin: 0 auto;
-  background:indigo;
+  background: indigo;
   border: 2px solid red;
-      
 }
 
 .slider {
   height: 100%;
-  width: 100%;   
-  border: 2px solid white;  
- /* overflow: hidden;*/
+  width: 100%;
+  border: 2px solid white;
+  /* overflow: hidden;*/
 }
-.slider__inner {  
+
+.slider__inner {
   width: 400%;
-  height: 80%;  
+  height: 80%;
   transition: all 0.5s linear;
   display: flex;
   flex-flow: row nowrap;
-  border: 2px solid rgb(10, 168, 57); 
-  position: relative;    
-}
-.slider__contents{
- width: 25%; 
- height: 100%; 
- border: 2px solid red;    
+  border: 2px solid rgb(10, 168, 57);
+  position: relative;
 }
 
-.slider__contents img{
+.slider__contents {
+  width: 25%;
+  height: 100%;
+  border: 2px solid red;
+}
+
+.slider__contents img {
   max-width: 100%;
   object-fit: cover;
- height: 100%; 
+  height: 100%;
 }
-/*.slider_and_input{ 
-  margin-top: 1.5%;
-display:flex;
-justify-content: space-between;
-width: 100%;
-border: 2px solid red;   
-}*/
-.wrapper_slider_Text{
-  width: 45%;
-  border: 2px solid rgb(10, 168, 57); 
+
+.slider_and_input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 2px solid red;
+}
+
+.wrapper_slider_Text {
+  width: 55%;
+  border: 2px solid rgb(10, 168, 57);
   overflow: hidden;
 }
-.slider__inner_Text{
-  width:400%;
-  height: 5%; 
+
+.slider__inner_Text {
+  width: 400%;
+  height: 5%;
   display: flex;
   position: relative;
   flex-flow: row nowrap;
-  border: 2px solid rgb(19, 2, 41); 
+  border: 2px solid rgb(19, 2, 41);
   transition: all 0.5s linear;
 }
 
-.slider__contents_Text{
-   width: 25%;
-   padding: 1.5rem 0;
+.slider__contents_Text {
+  width: 25%;
+  padding: 1em 0;
 }
+
 .slider__txt {
   color: rgb(248, 244, 244);
- font-size: 1rem;
- font-family: 'Georgia';
- font-weight: 700;
- letter-spacing: 0.1rem; 
- margin: 0;
+  font-size: 1em;
+  font-family: 'Georgia';
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin: 0;
 }
-/*
-.slider__nav {
-  width: 1rem;
-  height: 1rem;
-  margin: 2rem 1rem;
-  border-radius: 50%;
-  z-index: 10;
-  outline: .5rem solid #ccc;
-  outline-offset: -0.5rem;
-  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-  cursor: pointer; 
-  appearance: none;
-  backface-visibility: hidden;
-  transition: all .5s;
-  
-}
-.slider__nav:hover{
-  outline: .5rem solid rgb(27, 228, 104);
-}
-.slider__nav:checked {
-  animation: check 0.4s linear forwards;
-}
-/*.slider__nav:checked:nth-of-type(1) ~ #slider__inner{
-  left: 0%;
-}
-.slider__nav:checked:nth-of-type(2) ~ #slider__inner{
-  left: -100%;
-}
-.slider__nav:checked:nth-of-type(3) ~ #slider__inner{
-  left: -200%;
-}
-.slider__nav:checked:nth-of-type(4) ~ #slider__inner{
-  left: -300%;
-}*/
-
-
 
 @keyframes check {
   0% {
     transform: scale(0.4);
-    background: rgba(94, 4, 16, 0.7);	
+    background: rgba(94, 4, 16, 0.7);
     box-shadow: 0 0 0 12px rgb(238, 235, 235), 0 0 0 36px rgba(241, 207, 12, 0.5);
   }
+
   100% {
     transform: scale(0.4);
-    background: rgba(245, 239, 239, 0.7);	
+    background: rgba(245, 239, 239, 0.7);
     box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(206, 228, 7, 0);
   }
 }
 
-.switchers {	
-	width: 40%;
-	text-align: center;
-  float: left;
+.switchers {
+  width: 40%;
+  text-align: end;
 }
+
 .switcher {
-	background: rgba(0, 0, 0, .7);	
-	display: inline-block;
-	cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-  margin: 2rem 1rem;
+  background: radial-gradient(rgba(218, 209, 209, 1) 20%, rgb(31, 1, 51) 20%);
+  display: inline-block;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  margin: 1.2rem 0 0 1rem;
   border-radius: 50%;
+  position: relative;
   z-index: 10;
-  backface-visibility: hidden;  
-  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
   transition: all .2s linear;
 }
-.slide_img{ /*реальные инпуты*/
-transform: scale(0);
+
+.slide_img {
+  /*реальные инпуты*/
+  padding: 0px;
+  /*visibility: hidden;*/
 }
-#img_1:checked ~ #slider__inner{
+
+#img_1:checked~#slider__inner {
   left: 0%;
 }
-#img_2:checked ~ #slider__inner{
+#img_2:active~#slider__inner {
   left: -100%;
 }
-#img_3:checked ~ #slider__inner{
+#img_2:checked~#slider__inner {
+  left: -100%;
+}
+#img_3:checked~#slider__inner {
   left: -200%;
 }
-#img_4:checked ~ #slider__inner{
+#img_4:checked~#slider__inner {
+  left: -300%;
+}
+#img_1:checked~div div #slider__inner_Text {
+  left: 0%;
+}
+#img_2:checked~div div #slider__inner_Text {
+  left: -100%;
+}
+#img_3:checked~div div #slider__inner_Text {
+  left: -200%;
+}
+#img_4:checked~div div #slider__inner_Text {
   left: -300%;
 }
 
-
-#img_1:checked ~ div #slider__inner_Text{
-  left: 0%;
-}
-#img_2:checked ~  div #slider__inner_Text{
-  left: -100%;
-}
-#img_3:checked ~ div #slider__inner_Text{
-  left: -200%;
-}
-#img_4:checked ~ div #slider__inner_Text{
-  left: -300%;
+#img_1:checked~div div #switcher1,
+#img_2:checked~div div #switcher2,
+#img_3:checked~div div #switcher3,
+#img_4:checked~div div #switcher4 {
+  background: radial-gradient(rgb(223, 238, 8) 20%, rgb(31, 1, 51) 20%);
 }
 
-#img_1:checked ~ div #switcher1,
-#img_2:checked ~ div #switcher2,
-#img_3:checked ~ div #switcher3,
-#img_4:checked ~ div #switcher4
-{
-	background: #d1b30b;
+.switcher:hover {
+  background: radial-gradient(rgb(6, 58, 170) 20%, rgb(31, 1, 51) 20%);
 }
 
-.switcher:hover{
-	background: #1497d4;
-}
 .switcher:active {
   animation: check 1s linear forwards;
 }
-
 
