@@ -20,7 +20,7 @@
 @font-face {
   font-family: 'Georgia';
   src: url("./assets/fonts/Georgia-Bold.ttf") format(ttf);
-   font-weight: 700;
+  font-weight: 700;
 }
 
 @font-face {
@@ -39,22 +39,27 @@
   width: 80%;
   min-height: 82vh;
   margin: 0 auto;
-  background: rgb(31, 1, 51); 
+  background: rgb(31, 1, 51);
 }
-@media screen and (max-width: 1100px){
-  .wrapper, 
+
+@media screen and (max-width: 1100px) {
+
+  .wrapper,
   .block,
-  .slider{
+  .slider {
     min-height: 87vh;
+  }
 }
-}
-@media screen and (max-width: 320px){
-  .wrapper, 
+
+@media screen and (max-width: 320px) {
+
+  .wrapper,
   .block,
-  .slider{
+  .slider {
     min-height: 95vh;
+  }
 }
-}
+
 .slider {
   height: 100%;
   width: 100%;
@@ -67,7 +72,6 @@
   transition: all 0.7s linear;
   display: flex;
   flex-flow: row nowrap;
-  position: relative;
 }
 
 .slider__contents {
@@ -85,19 +89,21 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;  
+  margin-top: 2rem;
 }
-@media screen and (max-width: 1100px){
-.slider_and_input{
-flex-direction: column;
-justify-content: flex-start;
-margin-top: 0;
+
+@media screen and (max-width: 1100px) {
+  .slider_and_input {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+
+  .slider__inner {
+    width: 400%;
+    height: 70vh;
+  }
 }
-.slider__inner {
-  width: 400%;
-  height: 70vh;  
-}
-} 
 
 .wrapper_slider_Text {
   width: 55%;
@@ -108,15 +114,16 @@ margin-top: 0;
   width: 400%;
   height: 5%;
   display: flex;
-  position: relative;
   flex-flow: row nowrap;
   transition: all 0.7s linear;
 }
-@media screen and (max-width: 1100px){
+
+@media screen and (max-width: 1100px) {
   .wrapper_slider_Text {
-    width: 100%; 
+    width: 100%;
   }
 }
+
 .slider__contents_Text {
   width: 25%;
   padding: 1em 0;
@@ -129,25 +136,29 @@ margin-top: 0;
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin: 0;
-  animation: animeTxt 2s linear infinite;  
+  animation: animeTxt 2s linear infinite;
 }
-@media screen and (max-width: 1100px){
-  .slider__txt{
+
+@media screen and (max-width: 1100px) {
+  .slider__txt {
     font-size: .8rem;
   }
-  .slider__contents_Text {  
+
+  .slider__contents_Text {
     padding: 0;
   }
 }
-@media screen and (max-width: 320px){
-  .slider__txt{
+
+@media screen and (max-width: 320px) {
+  .slider__txt {
     font-size: .5rem;
   }
-  .slider__contents_Text {  
+
+  .slider__contents_Text {
     padding: 0;
   }
 }
-  
+
 @keyframes check {
   0% {
     transform: scale(0.4);
@@ -157,34 +168,34 @@ margin-top: 0;
 
   100% {
     transform: scale(1);
-    background: radial-gradient(rgb(6, 58, 170) 20%, rgb(31, 1, 51) 20%);    
+    background: radial-gradient(rgb(6, 58, 170) 20%, rgb(31, 1, 51) 20%);
   }
 }
+
 @keyframes animeTxt {
-  0% {   
-    color:rgb(236, 174, 186);
+  0% {
+    color: rgb(236, 174, 186);
   }
-  25% {    
-    color:rgb(215, 236, 122);
+  25% {
+    color: rgb(215, 236, 122);
   }
-  50% {    
-    color:rgb(112, 231, 88);
+  50% {
+    color: rgb(112, 231, 88);
   }
-  75% {    
-    color:rgb(94, 231, 224);
+  75% {
+    color: rgb(94, 231, 224);
   }
-  100% {    
-    color:rgb(234, 203, 240);
+  100% {
+    color: rgb(234, 203, 240);
   }
 }
 
 
 .switchers {
   width: 40%;
-  text-align: end; 
+  text-align: end;
   overflow: visible;
 }
-
 .switcher {
   background: radial-gradient(rgba(218, 209, 209, 1) 20%, rgb(31, 1, 51) 20%);
   display: inline-block;
@@ -198,7 +209,8 @@ margin-top: 0;
   transition: all .2s linear;
   overflow: visible;
 }
-@media screen and (max-width: 1100px){
+
+@media screen and (max-width: 1100px) {
   .switchers {
     width: 100%;
     display: flex;
@@ -207,20 +219,23 @@ margin-top: 0;
     margin: .7rem auto;
     order: -1
   }
+
   .switcher {
     display: inline-block;
     cursor: pointer;
     width: 3rem;
     height: 3rem;
-    margin: 0;   
+    margin: 0;
   }
 }
-@media screen and (max-width: 320px){
-    .switcher {
+
+@media screen and (max-width: 320px) {
+  .switcher {
     width: 2rem;
-    height: 2rem;    
+    height: 2rem;
   }
 }
+
 .slide_img {
   /*реальные инпуты*/
   padding: 0px;
@@ -228,43 +243,39 @@ margin-top: 0;
   transform: scale(0);
   visibility: hidden;
 }
-/* ЭТО НЕ УБИРАЕТ ЭЛЕМЕНТ ИЗ ПОТОКА, ЭТО СЛАЙДЕР с position relative- МЫ ПЕРЕДВИГАЕМ полосу с картинками и текстом по оси Х при нажатии на кнопки)*/
+
 #img_1:checked~#slider__inner {
-  left: 0%; 
+  transform: translateX(0%)
 }
 #img_2:checked~#slider__inner {
-  left: -100%; 
+  transform: translateX(-25%)
 }
 #img_3:checked~#slider__inner {
-  left: -200%;  
+  transform: translateX(-50%)
 }
 #img_4:checked~#slider__inner {
-  left: -300%;  
+  transform: translateX(-75%)
 }
 #img_1:checked~div div #slider__inner_Text {
-  left: 0%; 
+  transform: translateX(0%)
 }
 #img_2:checked~div div #slider__inner_Text {
-  left: -100%;  
+  transform: translateX(-25%)
 }
 #img_3:checked~div div #slider__inner_Text {
-  left: -200%; 
+  transform: translateX(-50%)
 }
 #img_4:checked~div div #slider__inner_Text {
-  left: -300%;
-  
+  transform: translateX(-75%)
 }
 
 #img_1:checked~div div #switcher1,
 #img_2:checked~div div #switcher2,
 #img_3:checked~div div #switcher3,
 #img_4:checked~div div #switcher4 {
-   animation: check 0.5s linear forwards;
- 
+  animation: check 0.5s linear forwards;
 }
+
 .switcher:hover {
   background: radial-gradient(rgb(238, 8, 115) 20%, rgb(31, 1, 51) 20%);
 }
-
-
-
